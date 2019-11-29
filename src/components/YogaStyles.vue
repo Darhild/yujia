@@ -29,7 +29,7 @@ export default Vue.extend({
   },
   computed: {
     storeSchedule() {
-      return this.$store.getters.schedule;
+      return this.$store.getters.schedule.slice(0, this.shownCards);
     },
 
     schedule() {
