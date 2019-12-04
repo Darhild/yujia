@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header />
+    <Promo />
     <Section className="styles">
       <template #title>
         Направления
@@ -18,13 +18,13 @@
 
 <script lang="ts">
 import Vue from "vue";
-import Header from "./../src/components/Header.vue";
+import Promo from "./../src/components/Promo.vue";
 import Section from "./../src/components/Section.vue";
 import YogaStyles from "./../src/components/YogaStyles.vue";
 
 export default Vue.extend({
   components: {
-    Header,
+    Promo,
     Section,
     YogaStyles
   }
@@ -33,10 +33,44 @@ export default Vue.extend({
 
 <style lang="scss">
 :root {
+  --text-primary: #8b7eac;
+  --text-secondary: #e65c7b;
+  --text-white: #fff;
+
   --color-bg-primary: #fcf8fe;
 }
 
+@font-face {
+  font-family: "Geometria";
+  src: url("assets/fonts/Geometria.woff") format("font-woff");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Geometria";
+  src: url("assets/fonts/Geometria-Medium.woff") format("font-woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
 body {
+  min-width: $screen-mobile;
+  max-width: $screen-desktop;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: "Geometria", sans-serif;
+  font-size: 12px;
+  color: var(--text-primary);
   background-color: var(--color-bg-primary);
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 700;
 }
 </style>
