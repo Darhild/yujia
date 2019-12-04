@@ -35,7 +35,8 @@ export default Vue.extend({
 :root {
   --text-primary: #8b7eac;
   --text-secondary: #e65c7b;
-  --text-white: #fff;
+
+  --color-white: #fff;
 
   --color-bg-primary: #fcf8fe;
 }
@@ -54,13 +55,16 @@ export default Vue.extend({
   font-style: normal;
 }
 
+html {
+  font-size: 12px;
+}
+
 body {
   min-width: $screen-mobile;
   max-width: $screen-desktop;
   margin-right: auto;
   margin-left: auto;
   font-family: "Geometria", sans-serif;
-  font-size: 12px;
   color: var(--text-primary);
   background-color: var(--color-bg-primary);
 }

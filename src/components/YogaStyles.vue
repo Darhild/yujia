@@ -4,6 +4,7 @@
       v-for="(item, index) in schedule"
       :type="index === 0 ? 'vertical' : 'horizontal'"
       :key="item.id"
+      :img="item.img"
       :title="item.style"
       :trainer="item.trainer"
       :schedule="item.time"

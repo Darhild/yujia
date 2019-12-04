@@ -1,6 +1,6 @@
 <template>
   <section class="Section" :class="`Section--${className}`">
-    <h2>
+    <h2 class="Section-Title">
       <slot name="title"></slot>
     </h2>
     <slot></slot>
@@ -18,7 +18,15 @@ export default Vue.extend({
 
 <style lang="scss">
 .Section {
+  margin-right: 35px;
+  margin-left: 35px;
   background-repeat: no-repeat;
+
+  &-Title {
+    margin-bottom: 40px;
+    font-size: 18px;
+    text-align: center;
+  }
 
   &--styles {
     background-image: url("./../assets/pattern.png");

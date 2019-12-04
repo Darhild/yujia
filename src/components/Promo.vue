@@ -44,7 +44,6 @@ export default Vue.extend({
   position: relative;
   padding-top: 20px;
   padding-right: 15px;
-  padding-bottom: 25%;
   padding-left: 15px;
   font-size: 12px;
   font-weight: 500;
@@ -53,7 +52,7 @@ export default Vue.extend({
   background-size: cover;
 
   @media (min-width: $screen-tablet) {
-    padding-bottom: 15%;
+    //padding-bottom: 130px;
   }
 
   @media (min-width: $screen-tablet) {
@@ -98,7 +97,7 @@ export default Vue.extend({
     letter-spacing: 0.26em;
     text-transform: uppercase;
     text-shadow: 0px 4px 50px rgba(131, 115, 161, 0.6);
-    color: var(--text-white);
+    color: var(--color-white);
 
     @media (min-width: $screen-tablet) {
       font-size: 144px;
@@ -109,9 +108,10 @@ export default Vue.extend({
   &-SignUp {
     margin-right: auto;
     margin-left: auto;
+    padding-bottom: 25%;
 
     @media (min-width: $screen-tablet) {
-      margin-bottom: 50px;
+      padding-bottom: 35%;
     }
   }
 
