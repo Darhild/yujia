@@ -56,7 +56,7 @@ export default Vue.extend({
 }
 
 html {
-  font-size: 12px;
+  font-size: 10px;
 }
 
 body {
@@ -67,6 +67,11 @@ body {
   font-family: "Geometria", sans-serif;
   color: var(--text-primary);
   background-color: var(--color-bg-primary);
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 a {

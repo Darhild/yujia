@@ -1,7 +1,9 @@
 <template>
   <a href="#">
     <div class="SignUp" :class="className">
-      <div class="SignUp-Button"></div>
+      <Button
+        className="SignUp-Button Button_color_secondary Button_type_arrow"
+      />
       <div class="SignUp-Text">
         Запишись на бесплатное<br />
         пробное занятие
@@ -12,9 +14,14 @@
 
 <script lang="ts">
 import Vue from "vue";
+import Button from "./Button.vue";
+
 export default Vue.extend({
   props: {
     className: String
+  },
+  components: {
+    Button
   }
 });
 </script>
@@ -26,36 +33,9 @@ export default Vue.extend({
   align-items: center;
 
   &-Button {
-    position: relative;
-    flex-shrink: 0;
     width: 30px;
     height: 26px;
-    margin-right: 13px;
-    background-color: var(--text-secondary);
-
-    &:before {
-      content: "";
-      position: absolute;
-      display: block;
-      left: calc(50% - 3px);
-      top: calc(50% - 3px);
-      width: 7px;
-      height: 1px;
-      background-color: var(--color-bg-primary);
-      transform: rotate(45deg);
-    }
-
-    &:after {
-      content: "";
-      position: absolute;
-      left: calc(50% - 3px);
-      bottom: calc(50% - 3px);
-      display: block;
-      width: 7px;
-      height: 1px;
-      background-color: var(--color-bg-primary);
-      transform: rotate(-45deg);
-    }
+    margin-right: 7px;
   }
 
   &-Text {

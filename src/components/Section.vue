@@ -19,6 +19,7 @@ export default Vue.extend({
 <style lang="scss">
 .Section {
   margin-right: 35px;
+  margin-bottom: 70px;
   margin-left: 35px;
   background-repeat: no-repeat;
 

@@ -8,20 +8,27 @@
       :title="item.style"
       :trainer="item.trainer"
       :schedule="item.time"
+      className="YogaStyles-Card"
     />
-    <button class="" @click="showMoreCards">
+
+    <Button
+      className="YogaStyles-Button Button_color_light"
+      @click="showMoreCards"
+    >
       Смотреть больше
-    </button>
+    </Button>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
 import Card from "./Card.vue";
+import Button from "./Button.vue";
 
 export default Vue.extend({
   components: {
-    Card
+    Card,
+    Button
   },
   data() {
     return {
@@ -44,3 +51,23 @@ export default Vue.extend({
   }
 });
 </script>
+
+<style lang="scss">
+.YogaStyles {
+  text-align: center;
+
+  &-Card {
+    margin-right: 30px;
+    margin-bottom: 30px;
+    text-align: left;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &-Button {
+    display: none;
+  }
+}
+</style>

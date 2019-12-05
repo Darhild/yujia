@@ -1,5 +1,5 @@
 <template>
-  <div class="Card">
+  <div class="Card" :class="className">
     <div class="Card-Photo">
       <img :src="`${publicPath}img/${img}`" />
     </div>
@@ -13,9 +13,12 @@
             {{ time }}
           </div>
         </div>
-        <div class="Card-Trainer">Инструктор {{ trainer }}</div>
+        <div class="Card-Trainer">
+          Инструктор<br />
+          {{ trainer }}
+        </div>
       </div>
-      <Button />
+      <Button className="Button_color_primary Button_type_arrow" />
     </div>
   </div>
 </template>
@@ -30,7 +33,8 @@ export default Vue.extend({
     img: String,
     title: String,
     schedule: Array,
-    trainer: String
+    trainer: String,
+    className: String
   },
   data() {
     return {
@@ -45,15 +49,34 @@ export default Vue.extend({
 
 <style lang="scss">
 .Card {
+  display: inline-block;
+  width: 250px;
+
   &-Content {
-    padding: 20px;
+    display: flex;
+    justify-content: space-between;
     background-color: var(--color-white);
+  }
+
+  &-Wrapper {
+    padding: 20px;
+    padding-right: 40px;
   }
 
   &-Title {
     margin-bottom: 10px;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 700;
+  }
+
+  &-Schedule {
+    margin-bottom: 13px;
+    font-size: 1.2rem;
+  }
+
+  &-Trainer {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
   }
 }
 </style>

@@ -15,7 +15,7 @@ export default new Vuex.Store({
       },
       {
         id: 2,
-        img: "ashtanga.png",
+        img: "ashatanga.png",
         style: "Ашатанга-йога",
         time: ["Пн, Ср, Пт - с 11:00 до 14:00", "Вт, Чт - с 19:00 до 21:00"],
         trainer: "Полина Емельянова"
