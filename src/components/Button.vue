@@ -1,5 +1,7 @@
 <template>
-  <button class="Button" :class="className"></button>
+  <button class="Button" :class="className">
+    <slot></slot>
+  </button>
 </template>
 
 <script lang="ts">
@@ -19,6 +21,7 @@ export default Vue.extend({
   cursor: pointer;
 
   &_color_primary {
+    color: var(--color-white);
     background-color: var(--text-primary);
   }
 
@@ -55,5 +58,5 @@ export default Vue.extend({
     background-color: var(--color-white);
     transform: rotate(-45deg);
   }
-}</style
->>
+}
+</style>

@@ -11,7 +11,7 @@
       <template #title>
         Абонементы
       </template>
-      <YogaStyles />
+      <Abonements />
     </Section>
   </div>
 </template>
@@ -21,12 +21,14 @@ import Vue from "vue";
 import Promo from "./../src/components/Promo.vue";
 import Section from "./../src/components/Section.vue";
 import YogaStyles from "./../src/components/YogaStyles.vue";
+import Abonements from "./../src/components/Abonements.vue";
 
 export default Vue.extend({
   components: {
     Promo,
     Section,
-    YogaStyles
+    YogaStyles,
+    Abonements
   }
 });
 </script>
