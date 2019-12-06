@@ -14,7 +14,7 @@
       </template>
     </div>
     <div class="Abonement-Price">{{ price }} р</div>
-    <Button :className="['Button_color_primary', 'Abonements-Button']">
+    <Button :className="['Button_color_primary', 'Abonement-Button']">
       Заказать абонемент
     </Button>
   </div>
@@ -44,7 +44,34 @@ export default Vue.extend({
 
 <style lang="scss">
 .Abonement {
+  display: inline-block;
+  width: 250px;
   padding: 30px 50px;
+  text-align: center;
   background-color: var(--color-white);
+
+  &-Time {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+
+  &-Hours {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: var(--text-secondary);
+  }
+
+  &-Price {
+    margin-bottom: 25px;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &-Button {
+    padding: 14px 23px;
+  }
 }
 </style>
